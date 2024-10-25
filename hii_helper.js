@@ -108,7 +108,7 @@ function clearGrid(x){
     getField(x).gridOptions.data=[];
     getField(x).refreshGrid();
 }
-console.log('%cHelper script written by HI&I for the sole use of its clients. This script should not be shared outside of HI&I clients except with the written permission of HI&I personnel.','color:purple; font-size:12px;');
+console.log('%cHelper script written by HI&I for the sole use of its clients. This script should not be shared outside of HI&I clients except with the written permission of HI&I personnel.','color:purple; font-size:12px; background-color: 00F5D8;');
 /**********************************************
  * 
  * HI&I HELPER FUNCTIONS END
