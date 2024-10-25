@@ -93,12 +93,12 @@ function selectAllChkbx(x,y){       //this lets you select/unselect all via a se
     }
 }
 
-function dynamicGridHeight(x,y){              //need to pass grid and response.data.Items.length
-    if(y<5){                               //adjust the height of the grid based on size
+function dynamicGridHeight(x,y,z){              //need to pass grid and response.data.Items.length
+    if(y<z){                               //adjust the height of the grid based on size
         getField(x).gridOptions.minRowsToShow = y + 1;
         getField(x).refreshGrid(); 
     } else {
-        getField(x).gridOptions.minRowsToShow = 6;
+        getField(x).gridOptions.minRowsToShow = z;
         getField(x).refreshGrid(); 
     }    
 }
