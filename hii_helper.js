@@ -1,7 +1,5 @@
 /**********************************************
- * 
  * HI&I HELPER FUNCTIONS START
- * 
  * *******************************************/
 function getField(clientID){                    //this is the most amazing function ever to prevent you from having to put intForm.getElementByClientID every time
     return intForm.getElementByClientID(clientID);
