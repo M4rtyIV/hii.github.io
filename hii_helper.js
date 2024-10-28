@@ -29,6 +29,11 @@ function blastField(x){         //this reverts a field back to original - pass j
     getField(x).Answer = null;                  //this should handle different question types
     getField(x).validation.required = false;
     getField(x).readonly = false;
+    if(getField(x).QuestionType === 'DbCheckbox'){
+        for(var cb=0; cb<getField(x).Choices.length; cb++){
+            getField(x).Choices[cb].Selected=false;
+        }
+    }
 }
 
 function requiredField(x){      //this makes a field required and ensures it is shown - pass just the clientID
