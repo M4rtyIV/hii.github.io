@@ -113,7 +113,8 @@ function clearGrid(x){
     getField(x).gridOptions.data=[];
     getField(x).refreshGrid();
 }
-function getdbMappings(x){
+
+function getMappings(x){
     for(var i=0; i<getField(x).dbSettings.mappings.length; i++){
         console.log('%c'+x+' mapping ','color:red; font-weight: bold;','Field:', getField(x).dbSettings.mappings[i].ClientID, 'DB_Column:', getField(x).dbSettings.mappings[i].ColumnName);
     }
