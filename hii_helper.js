@@ -113,6 +113,11 @@ function clearGrid(x){
     getField(x).gridOptions.data=[];
     getField(x).refreshGrid();
 }
+function getdbMappings(x){
+    for(var i=0; i<getField(x).dbSettings.mappings.length; i++){
+        console.log('%c'+x+' mapping ','color:red; font-weight: bold;','Field:', getField(x).dbSettings.mappings[i].ClientID, 'DB_Column:', getField(x).dbSettings.mappings[i].ColumnName);
+    }
+}
 
 function getFormLayoutItems(){
     for(var x=0; x<intForm.layout.length; x++){                                     //write Section and FormText client IDs to console.
@@ -131,13 +136,6 @@ function getFormLayoutItems(){
         }
     }
 }
-
-function getdbMappings(x){
-    for(var i=0; i<intForm.getElementByClientID(x).dbSettings.mappings.length; i++){
-        console.log('%c'+x+' mapping ','color:red; font-weight: bold;','Field:', intForm.getElementByClientID(x).dbSettings.mappings[i].ClientID, 'DB_Column:', intForm.getElementByClientID(x).dbSettings.mappings[i].ColumnName);
-    }
-}
-
 console.log('%cHelper script written by HI&I for the sole use of its clients. This script should not be shared outside of HI&I clients except with the written permission of HI&I personnel.','color:#261683; font-size:12px; background-color:#00F5D8;');
 /**********************************************
  * HI&I HELPER FUNCTIONS END
