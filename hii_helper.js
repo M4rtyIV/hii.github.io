@@ -113,9 +113,32 @@ function clearGrid(x){
     getField(x).gridOptions.data=[];
     getField(x).refreshGrid();
 }
+
+function getFormLayoutItems(){
+    for(var x=0; x<intForm.layout.length; x++){                                     //write Section and FormText client IDs to console.
+        console.log('%cSection:','color:orange; font-weight:bold;',intForm.layout[x].ClientID);
+        for(var y=0; y<intForm.layout[x].contents.length; y++){
+            for(var z=0; z<intForm.layout[x].contents[y].columns.length; z++){
+                for(var a=0; a<intForm.layout[x].contents[y].columns[z].items.length; a++){
+                    if(intForm.layout[x].contents[y].columns[z].items[a].QuestionType==='FormText'){
+                        console.log('%cFormText:','color:white; font-weight:bold;',intForm.layout[x].contents[y].columns[z].items[a].ClientID);
+                    }
+                    if(intForm.layout[x].contents[y].columns[z].items[a].QuestionType==='Button'){
+                        console.log('%cButton:','color:lightgreen; font-weight:bold;',intForm.layout[x].contents[y].columns[z].items[a].ClientID);
+                    }
+                }
+            }
+        }
+    }
+}
+
+function getDbMappings(x){
+    for(var i=0;i<intForm.getElementByClientID(x).dbSettings.mappings.length;i++){
+        console.log('%c'+x+' mapping ','color:red; font-weight: bold;','Field:', intForm.getElementByClientID(x).dbSettings.mappings[i].ClientID, 'DB_Column:', intForm.getElementByClientID(x).dbSettings.mappings[i].ColumnName);
+    }
+}
+
 console.log('%cHelper script written by HI&I for the sole use of its clients. This script should not be shared outside of HI&I clients except with the written permission of HI&I personnel.','color:#261683; font-size:12px; background-color:#00F5D8;');
 /**********************************************
- * 
  * HI&I HELPER FUNCTIONS END
- * 
  * *******************************************/
