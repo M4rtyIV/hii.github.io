@@ -132,8 +132,8 @@ function getFormLayoutItems(){
     }
 }
 
-function getDbMappings(x){
-    for(var i=0;i<intForm.getElementByClientID(x).dbSettings.mappings.length;i++){
+function getdbMappings(x){
+    for(var i=0; i<intForm.getElementByClientID(x).dbSettings.mappings.length; i++){
         console.log('%c'+x+' mapping ','color:red; font-weight: bold;','Field:', intForm.getElementByClientID(x).dbSettings.mappings[i].ClientID, 'DB_Column:', intForm.getElementByClientID(x).dbSettings.mappings[i].ColumnName);
     }
 }
