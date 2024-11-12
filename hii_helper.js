@@ -84,7 +84,7 @@ function formatCPDate(x) {      //this transforms an Integrify date field into a
         myDay = '0' + intDay;
     else
         myDay = intDay;
-    return myYear + '-' + myMonth + '-' + myDay + 'T00:00:00.0';
+    return myYear + '-' + myMonth + '-' + myDay + 'T01:00:00.0';
 }
 
 function selectAllChkbx(x,y){       //this lets you select/unselect all via a separate checkbox control - pass ClientID of grid and checkbox
