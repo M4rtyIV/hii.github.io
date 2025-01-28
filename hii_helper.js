@@ -136,7 +136,7 @@ function getFormLayoutItems(){
         }
     }
 }
-console.log('%cHelper script written by HI&I for the sole use of its clients. This script should not be shared outside of HI&I clients except with the written permission of HI&I personnel.','color:#261683; font-size:12px; background-color:#00F5D8;');
+console.log('%cHelper script written by HI&I for the sole use of its clients (last Updated 1-28-2025). This script should not be shared outside of HI&I clients except with the written permission of HI&I personnel.','color:#261683; font-size:12px; background-color:#00F5D8;');
 /**********************************************
  * HI&I HELPER FUNCTIONS END
  * *******************************************/
