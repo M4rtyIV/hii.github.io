@@ -136,6 +136,42 @@ function getFormLayoutItems(){
         }
     }
 }
+
+function getFormSections(){
+    for(var x=0; x<intForm.layout.length; x++){                                     //write Section Info to console.
+        console.log('%cSection:','color:orange; font-weight:bold;',intForm.layout[x].Label,': ',intForm.layout[x].ClientID);
+    }
+}
+
+function getFormText(){
+    for(var x=0; x<intForm.layout.length; x++){                                     //write FormText to console.
+        for(var y=0; y<intForm.layout[x].contents.length; y++){
+            for(var z=0; z<intForm.layout[x].contents[y].columns.length; z++){
+                for(var a=0; a<intForm.layout[x].contents[y].columns[z].items.length; a++){
+                    if(intForm.layout[x].contents[y].columns[z].items[a].QuestionType==='FormText'){
+                        console.log('%cFormText:','color:white; font-weight:bold;',intForm.layout[x].contents[y].columns[z].items[a].ClientID, intForm.layout[x].contents[y].columns[z].items[a].formtext);
+                    }
+                }
+            }
+        }
+    }
+}
+
+function getFormButtons(){
+    for(var x=0; x<intForm.layout.length; x++){                                     //write Section and Buttons to console.
+        console.log('%cSection:','color:orange; font-weight:bold;',intForm.layout[x].Label);
+        for(var y=0; y<intForm.layout[x].contents.length; y++){
+            for(var z=0; z<intForm.layout[x].contents[y].columns.length; z++){
+                for(var a=0; a<intForm.layout[x].contents[y].columns[z].items.length; a++){
+                    if(intForm.layout[x].contents[y].columns[z].items[a].QuestionType==='Button'){
+                        console.log('%cButton:','color:lightgreen; font-weight:bold;',intForm.layout[x].contents[y].columns[z].items[a].ClientID);
+                    }
+                }
+            }
+        }
+    }
+}
+
 console.log('%cHelper script written by HI&I for the sole use of its clients (last Updated 1-28-2025). This script should not be shared outside of HI&I clients except with the written permission of HI&I personnel.','color:#261683; font-size:12px; background-color:#00F5D8;');
 /**********************************************
  * HI&I HELPER FUNCTIONS END
