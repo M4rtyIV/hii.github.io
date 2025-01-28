@@ -61,7 +61,6 @@ function formatNumber(num, decimalPlaces, mode) {
 
 function isEmpty(x){            //this checks for a field being blank and returns true/false - pass just the clientID
   return (getField(x).Answer === null || 
-            getField(x).Answer.length === 0 || 
             getField(x).Answer ===' ' || 
             getField(x).Answer ==='null' ||
             getField(x).Answer === '');
