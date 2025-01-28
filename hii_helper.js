@@ -126,7 +126,7 @@ function getFormLayoutItems(){
             for(var z=0; z<intForm.layout[x].contents[y].columns.length; z++){
                 for(var a=0; a<intForm.layout[x].contents[y].columns[z].items.length; a++){
                     if(intForm.layout[x].contents[y].columns[z].items[a].QuestionType==='FormText'){
-                        console.log('%cFormText:','color:white; font-weight:bold;',intForm.layout[x].contents[y].columns[z].items[a].ClientID);
+                        console.log('%cFormText:','color:white; font-weight:bold;',intForm.layout[x].contents[y].columns[z].items[a].ClientID, intForm.layout[x].contents[y].columns[z].items[a].formtext);
                     }
                     if(intForm.layout[x].contents[y].columns[z].items[a].QuestionType==='Button'){
                         console.log('%cButton:','color:lightgreen; font-weight:bold;',intForm.layout[x].contents[y].columns[z].items[a].ClientID);
