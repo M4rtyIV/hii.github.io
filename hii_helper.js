@@ -121,7 +121,7 @@ function getMappings(x){
 
 function getFormLayoutItems(){
     for(var x=0; x<intForm.layout.length; x++){                                     //write Section and FormText client IDs to console.
-        console.log('%cSection:','color:orange; font-weight:bold;',intForm.layout[x].ClientID);
+        console.log('%cSection:','color:orange; font-weight:bold;',intForm.layout[x].Label,': ',intForm.layout[x].ClientID);
         for(var y=0; y<intForm.layout[x].contents.length; y++){
             for(var z=0; z<intForm.layout[x].contents[y].columns.length; z++){
                 for(var a=0; a<intForm.layout[x].contents[y].columns[z].items.length; a++){
