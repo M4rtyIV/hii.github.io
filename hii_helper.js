@@ -172,6 +172,38 @@ function getFormButtons(){
     }
 }
 
+async function postReport(url = "", data = {}, isSingle = false) {            //this is a function to get the data from a report
+  // Default options are marked with *
+  const response = await fetch(url, {
+    method: "POST",
+    body: JSON.stringify(data), // body data type must match "Content-Type" header
+  });
+  
+  const parsedData = mapReportJSON(await response.json());
+  
+  if(! parsedData) return null;
+    // If it's known the report only returns a single row of data,
+  // return an object instead of an object array
+  return isSingle ? parsedData[0] : parsedData;
+}
+
+// We only need the rows from the report
+function mapReportJSON(json) {                                                //this is to map the fields to the column names
+    if(! json) return;
+    const data = new Array();
+    json.rows.forEach(row => {
+        const result = {};
+        row.cells.forEach(cell => {
+           result[cell.columnName] = cell.value;
+        });
+        data.push(result);
+    });
+    return data;
+}
+
+
+
+
 console.log('%cHelper script written by HI&I for the sole use of its clients (last Updated 1-28-2025). This script should not be shared outside of HI&I clients except with the written permission of HI&I personnel.','color:#261683; font-size:12px; background-color:#00F5D8;');
 /**********************************************
  * HI&I HELPER FUNCTIONS END
