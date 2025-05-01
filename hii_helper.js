@@ -201,15 +201,6 @@ function mapReportJSON(json) {                                                //
     return data;
 }
 
-function logRequiredFields() {
-    console.log("Required Fields Only:");
-    getQuestions().forEach(function(field) {
-        if (field.validation && field.validation.required === true) {
-            const label = field.Label || field.Name || field.clientId || "Unnamed Field";
-            console.log('++',label);
-        }
-    });
-}
 
 
 console.log('%cHelper script written by HI&I for the sole use of its clients (last Updated 1-28-2025). This script should not be shared outside of HI&I clients except with the written permission of HI&I personnel.','color:#261683; font-size:12px; background-color:#00F5D8;');
