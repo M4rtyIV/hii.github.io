@@ -206,7 +206,7 @@ function logRequiredFields() {
     getQuestions().forEach(function(field) {
         if (field.validation && field.validation.required === true) {
             const label = field.Label || field.Name || field.clientId || "Unnamed Field";
-            console.log('++',${label});
+            console.log('++',label);
         }
     });
 }
