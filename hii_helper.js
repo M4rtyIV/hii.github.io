@@ -63,6 +63,7 @@ function isEmpty(x){            //this checks for a field being blank and return
   return (getField(x).Answer === null || 
             getField(x).Answer ===' ' || 
             getField(x).Answer ==='null' ||
+            getField(x).Answer === undefined ||
             getField(x).Answer === '');
 }
 
